@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useEffect,useState } from 'react';
 import { Row, Col, Card, Form, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import HtmlHead from 'components/html-head/HtmlHead';
@@ -23,8 +23,16 @@ import axios from "axios";
 const DashboardGettingStarted = () => {
   const title = 'Getting Started';
   const description = 'Service Provider Getting Started';
-  const[bannerimage,setbannerimage]=usestate([])
-//  fetchImages();
+  const [bannerimage, setbannerimage] = useState([]);
+  useEffect(() => {
+    const url = `http://localhost:1337/homeBanner`
+    axios.get(url, { responseType: 'json' })
+      .then(res => {
+        setbannerimage(res.data);
+      });
+  }, [])
+  
+  //  fetchImages();
   return (
     <>
       <HtmlHead title={title} description={description} />
@@ -44,7 +52,7 @@ const DashboardGettingStarted = () => {
           {/* Introduction Banner Start */}
           <Col lg="8" className="mb-5">
             <Card className="sh-45 h-lg-100 position-relative bg-theme">
-              {/* <img src="/img/illustration/database.webp" className="card-img h-100 position-absolute theme-filter" alt="card image" /> */}
+              <img src={bannerimage} className="card-img h-100 position-absolute theme-filter" alt="card image" />
               <div className="card-img-overlay d-flex flex-column justify-content-end bg-transparent">
                 <div className="mb-4">
                   <div className="cta-1 mb-2 w-75 w-sm-50">Introduction to Cloud</div>

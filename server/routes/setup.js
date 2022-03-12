@@ -51,7 +51,7 @@ router.post('/homesetting',cors(),function(req, res) {
       form.parse(req, function (err, fields, files) {
 		
         var oldpath = files.banner.filepath;
-        var newpath = './public/home/banner' + files.banner.originalFilename;
+        var newpath = './public/home/banner/' + files.banner.originalFilename;
         fs.rename(oldpath, newpath, function (err) {
           if (err) throw err;
         //   res.write('File uploaded and moved!');
@@ -75,12 +75,9 @@ router.post('/homesetting',cors(),function(req, res) {
 	});
 	
 });
-router.get('/homeBanner/:file(*)', (req, res) => {
-    let file = req.params.file;
-    let fileLocation = path.join('./public/home/banner/', file);
-    //res.send('abc');
-	// res.sendFile(`${fileLocation}`)
-	res.sendFile(file, { root: __dirname });
+router.get('/homeBanner', function(req, res){
+	let fileLocation = 'http://localhost:1337/home/banner/Home_Page_Banner.webp';
+    res.send(fileLocation);
 })
 
 router.get('/program', (req, res) => {
