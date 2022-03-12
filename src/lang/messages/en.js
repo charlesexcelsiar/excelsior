@@ -15,7 +15,7 @@ const enMessages = {
   'menu.register': 'Register',
   'menu.forgot-password': 'Forgot Password',
   'menu.reset-password': 'Reset Password',
-  'menu.blog': 'Blog',
+  'menu.blog': 'Blogs',
   'menu.home': 'Home',
   'menu.grid': 'Grid',
   'menu.list': 'List',
@@ -142,6 +142,7 @@ const enMessages = {
   'menu.general': 'General',
 
   'menu.upgrade': 'Upgrade',
+  'menu.scholarship': 'Scholarship',
   'menu.community': 'Community',
   'menu.community-list': 'Community List',
   'menu.getting-started': 'Getting Started',

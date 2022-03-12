@@ -23,7 +23,7 @@ const Layout = ({ children }) => {
       <main>
         <Container>
           <Row className="h-100">
-            <SidebarMenu />
+            {/* <SidebarMenu /> */}
             <Col className="h-100" id="contentArea">
               {children}
             </Col>

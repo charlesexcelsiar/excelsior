@@ -1,13 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Row, Col, Card, Form, Button } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import HtmlHead from 'components/html-head/HtmlHead';
 import CsLineIcons from 'cs-line-icons/CsLineIcons';
+import axios from "axios";
+
+// function fetchImages(){
+//   console.log('jjj');
+//   console.log('am in fetch');
+//   const imageName = 'bannersuccess.png';
+// const url = `http://localhost:1337/homeBanner/${imageName}`
+//   axios.get(url, {responseType: 'blob'})
+//   .then(res => {
+//     console.log('jjj');
+//   console.log(res);
+//       return(
+//           <img src={res.data} alt="trial" />
+//       )
+//   });
+// }
 
 const DashboardGettingStarted = () => {
   const title = 'Getting Started';
   const description = 'Service Provider Getting Started';
-
+  const[bannerimage,setbannerimage]=usestate([])
+//  fetchImages();
   return (
     <>
       <HtmlHead title={title} description={description} />
@@ -17,7 +34,7 @@ const DashboardGettingStarted = () => {
           <Row>
             <Col className="mb-2">
               <h1 className="mb-2 pb-0 display-4">{title}</h1>
-              <div className="text-muted font-heading text-small">Let us manage the database engines for your applications so you can focus on building.</div>
+              {/* <div className="text-muted font-heading text-small">Let us manage the database engines for your applications so you can focus on building.</div> */}
             </Col>
           </Row>
         </div>
@@ -27,7 +44,7 @@ const DashboardGettingStarted = () => {
           {/* Introduction Banner Start */}
           <Col lg="8" className="mb-5">
             <Card className="sh-45 h-lg-100 position-relative bg-theme">
-              <img src="/img/illustration/database.webp" className="card-img h-100 position-absolute theme-filter" alt="card image" />
+              {/* <img src="/img/illustration/database.webp" className="card-img h-100 position-absolute theme-filter" alt="card image" /> */}
               <div className="card-img-overlay d-flex flex-column justify-content-end bg-transparent">
                 <div className="mb-4">
                   <div className="cta-1 mb-2 w-75 w-sm-50">Introduction to Cloud</div>
@@ -36,7 +53,7 @@ const DashboardGettingStarted = () => {
                 <div>
                   <NavLink to="/services/database" className="btn btn-icon btn-icon-start btn-primary mt-3 stretched-link">
                     <CsLineIcons icon="chevron-right" />
-                    <span>Getting Started</span>
+                    <span>Getting Startedxx</span>
                   </NavLink>
                 </div>
               </div>
