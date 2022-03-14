@@ -141,9 +141,11 @@ const enMessages = {
   'menu.discount': 'de|Discount',
   'menu.general': 'de|General',
 
-  'menu.upgrade': 'de|Upgrade',
+  'menu.programs': 'de|Programs',
   'menu.scholarship': 'de|Scholarship',
   'menu.community': 'de|Community',
+  'menu.about_us': 'de|About Us',
+  'menu.contact': 'de|Contact',
   'menu.community-list': 'de|Community List',
   'menu.getting-started': 'de|Getting Started',
   'menu.analysis': 'de|Analysis',

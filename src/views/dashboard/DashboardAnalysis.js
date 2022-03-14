@@ -450,8 +450,8 @@ const DashboardAnalysis = () => {
                     </Clamp>
                   </Col>
                   <Col sm="auto" className="d-flex align-items-center position-relative">
-                    <NavLink to="/upgrade" className="btn btn-icon btn-icon-start btn-primary">
-                      <CsLineIcons icon="send" /> <span>Upgrade</span>
+                    <NavLink to="/programs" className="btn btn-icon btn-icon-start btn-primary">
+                      <CsLineIcons icon="send" /> <span>Programs</span>
                     </NavLink>
                   </Col>
                 </Row>

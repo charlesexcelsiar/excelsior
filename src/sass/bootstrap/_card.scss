@@ -6,15 +6,33 @@
 *
 */
 
+.btn-primary, .btn-primary:not(:disabled):not(.disabled):focus, .btn-primary:not(:disabled):not(.disabled).focus {
+  background-color: #ea5955;
+}
+.small-title1 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  margin-bottom: 0;
+  font-size: 1.5em;
+  color: #ea5955;
+  height: var(--small-title-height);
+}
 .card {
   @include shadow-basic;
-  background: var(--foreground);
+  // background: var(--foreground);
+  background-color: #fff;
   border-radius: var(--border-radius-lg);
-  border: initial;
+  padding-left: 10px;
+  padding-top: 10px;
+  color:000;
+  height: 200px;
+  // border: initial;
   &.no-shadow {
     box-shadow: initial !important;
   }
-
+  .text-muted {
+    color: #000 !important;
+}
   .card-body,
   .card-footer,
   .card-header {

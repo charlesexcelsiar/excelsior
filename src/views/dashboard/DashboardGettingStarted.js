@@ -41,13 +41,13 @@ const DashboardGettingStarted = () => {
         <div className="page-title-container mb-3">
           <Row>
             <Col className="mb-2">
-              <h1 className="mb-2 pb-0 display-4">{title}</h1>
+              <h1 className="mb-2 pb-0 display-4"><span style={{color:'#ea5955'}}>{title}</span></h1>
               {/* <div className="text-muted font-heading text-small">Let us manage the database engines for your applications so you can focus on building.</div> */}
             </Col>
           </Row>
         </div>
         {/* Title End */}
-
+       
         <Row>
           {/* Introduction Banner Start */}
           <Col lg="8" className="mb-5">
@@ -55,44 +55,59 @@ const DashboardGettingStarted = () => {
               <img src={bannerimage} className="card-img h-100 position-absolute theme-filter" alt="card image" />
               <div className="card-img-overlay d-flex flex-column justify-content-end bg-transparent">
                 <div className="mb-4">
-                  <div className="cta-1 mb-2 w-75 w-sm-50">Introduction to Cloud</div>
-                  <div className="w-50 text-alternate">Lollipop chocolate marzipan marshmallow gummi bears. Tootsie roll liquorice cake jelly beans.</div>
+                  {/* <div className="cta-1 mb-2 w-75 w-sm-50">Introduction to Cloud</div>
+                  <div className="w-50 text-alternate">Lollipop chocolate marzipan marshmallow gummi bears. Tootsie roll liquorice cake jelly beans.</div> */}
                 </div>
-                <div>
+                {/* <div>
                   <NavLink to="/services/database" className="btn btn-icon btn-icon-start btn-primary mt-3 stretched-link">
                     <CsLineIcons icon="chevron-right" />
-                    <span>Getting Startedxx</span>
+                    <span>Getting Started</span>
                   </NavLink>
-                </div>
+                </div> */}
               </div>
             </Card>
           </Col>
           {/* Introduction Banner End */}
 
           {/* Introduction List Start */}
-          <Col lg="4" className="mb-5">
+          <Col lg="4" className="mb-5"><h2 className="small-title1">CTA</h2>
             <Card className="mb-2 hover-border-primary">
+            
               <Row className="g-0 sh-9">
-                <Col xs="auto">
-                  <div className="sw-9 sh-9 d-inline-block d-flex justify-content-center align-items-center">
-                    <div className="fw-bold text-primary">
-                      <CsLineIcons icon="server" />
+                  {/* <Col xs="auto">
+                    <div className="sw-9 sh-9 d-inline-block d-flex justify-content-center align-items-center">
+                      <div className="fw-bold text-primary">
+                        <CsLineIcons icon="server" />
+                      </div>
                     </div>
-                  </div>
-                </Col>
+                  </Col> */}
                 <Col>
-                  <Card.Body className="d-flex flex-column p-0 pe-4 h-100 justify-content-center">
+                <Card.Body className="d-flex flex-column p-0 pe-4 h-100 justify-content-center">
+        <div className="cta-3">Ready to make bread?</div>
+        <div className="mb-3 cta-3">Start now!</div>
+        <Row className="gx-2">
+          <Col>
+            <div className="text-muted mb-3 mb-sm-0 pe-3">Cheesecake chocolate carrot cake pie lollipop lemon toffee lollipop. Oat cake pie cake cotton.</div>
+          </Col>
+          <Col xs="12" sm="auto" className="d-flex align-items-center position-relative">
+            <Button variant="primary" className="btn-primary btn-icon btn-icon-start stretched-link">
+              <CsLineIcons icon="chevron-right" /> <span>View</span>{' '}
+            </Button>
+          </Col>
+        </Row>
+      </Card.Body>
+                  {/* <Card.Body className="d-flex flex-column p-0 pe-4 h-100 justify-content-center">
                     <div className="d-flex flex-column">
                       <NavLink to="/services/database/add" className="stretched-link alternate-link">
                         Add New Volume
                       </NavLink>
                       <div className="text-small text-muted text-truncate">Snaps muffin macaroon.</div>
                     </div>
-                  </Card.Body>
+                  </Card.Body> */}
                 </Col>
               </Row>
             </Card>
-            <Card className="mb-2 hover-border-primary">
+            {/* <Card className="mb-2 hover-border-primary">
               <Row className="g-0 sh-9">
                 <Col xs="auto">
                   <div className="sw-9 sh-9 d-inline-block d-flex justify-content-center align-items-center">
@@ -154,22 +169,22 @@ const DashboardGettingStarted = () => {
                   </Card.Body>
                 </Col>
               </Row>
-            </Card>
+            </Card> */}
           </Col>
           {/* Introduction List End */}
         </Row>
 
         {/* Guildes Start  */}
-        <h2 className="small-title">Guides</h2>
+        <h2 className="small-title1">Admission Procedure</h2>
         <Row className="g-2 row-cols-1 row-cols-xl-2 row-cols-xxl-4 mb-5">
           <Col>
-            <Card className="h-100">
+            <Card className="h-100 card">
               <Card.Body>
                 <div className="text-center">
-                  <img src="/img/illustration/icon-launch.webp" className="theme-filter" alt="launch" />
+                  <img src="/img/illustration/icon-launch.webp" className="theme-filter1" alt="launch" />
                   <div className="d-flex flex-column sh-5">
                     <NavLink to="/support/knowledge-base" className="heading stretched-link">
-                      Application Launch
+                      <span style={{color:'#ea5955'}}>Explore</span>
                     </NavLink>
                   </div>
                 </div>
@@ -181,7 +196,7 @@ const DashboardGettingStarted = () => {
             <Card className="h-100">
               <Card.Body>
                 <div className="text-center">
-                  <img src="/img/illustration/icon-performance.webp" className="theme-filter" alt="performance" />
+                  <img src="/img/illustration/icon-performance.webp" className="theme-filter1" alt="performance" />
                   <div className="d-flex flex-column sh-5">
                     <NavLink to="/support/knowledge-base" className="heading stretched-link">
                       Performance Tweaks
@@ -196,7 +211,7 @@ const DashboardGettingStarted = () => {
             <Card className="h-100">
               <Card.Body>
                 <div className="text-center">
-                  <img src="/img/illustration/icon-configure.webp" className="theme-filter" alt="configure" />
+                  <img src="/img/illustration/icon-configure.webp" className="theme-filter1" alt="configure" />
                   <div className="d-flex flex-column sh-5">
                     <NavLink to="/support/knowledge-base" className="heading stretched-link">
                       Advanced Configuration
@@ -211,7 +226,7 @@ const DashboardGettingStarted = () => {
             <Card className="h-100">
               <Card.Body>
                 <div className="text-center">
-                  <img src="/img/illustration/icon-analytics.webp" className="theme-filter" alt="analytics" />
+                  <img src="/img/illustration/icon-analytics.webp" className="theme-filter1" alt="analytics" />
                   <div className="d-flex flex-column sh-5">
                     <NavLink to="/support/knowledge-base" className="heading stretched-link">
                       Server Analytics

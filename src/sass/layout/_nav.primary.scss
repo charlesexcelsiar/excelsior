@@ -17,13 +17,13 @@ html[data-placement="vertical"] {
     background-size: cover;
     width: var(--nav-size);
     background-position: center;
-    background-image: linear-gradient(
-      160deg,
-      var(--gradient-1),
-      var(--gradient-1),
-      var(--gradient-2),
-      var(--gradient-3)
-    );
+    // background-image: linear-gradient(
+    //   160deg,
+    //   var(--gradient-1),
+    //   var(--gradient-1),
+    //   var(--gradient-2),
+    //   var(--gradient-3)
+    // );
 
     .nav-shadow {
       width: 100%;
@@ -1185,11 +1185,12 @@ html[data-navcolor="light"] {
   }
 
   .nav-container {
-    background: var(--background-navcolor-light);
+    //background: var(--background-navcolor-light);
+    background-color: #ea5955;
   }
 
   .nav-container .menu-container .menu a {
-    color: var(--alternate) !important;
+    // color: var(--alternate) !important;
 
     &.active,
     &:hover {
@@ -1197,12 +1198,12 @@ html[data-navcolor="light"] {
     }
 
     .icon {
-      color: var(--alternate) !important;
+//      color: var(--alternate) !important;
     }
   }
 
   .nav-container .menu-icons > li > a {
-    color: var(--alternate);
+    // color: var(--alternate);
     &:hover {
       background: rgba(0, 0, 0, 0.05) !important;
     }
@@ -1224,7 +1225,7 @@ html[data-navcolor="light"] {
   }
 
   .nav-container .menu-container .menu > li > a .icon {
-    color: var(--primary);
+    // color: var(--primary);
   }
 
   .nav-container .user-container .user .name {

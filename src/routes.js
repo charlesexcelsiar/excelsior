@@ -8,8 +8,11 @@ const community = {
   index: lazy(() => import('views/community/Community')),
   list: lazy(() => import('views/community/CommunityList')),
 };
-const upgrade = lazy(() => import('views/upgrade/Upgrade'));
-
+// const upgrade = lazy(() => import('views/upgrade/Upgrade'));
+const programs = lazy(() => import('views/upgrade/Upgrade'));
+const aboutus = lazy(() => import('views/upgrade/Upgrade'));
+const scholarship = lazy(() => import('views/upgrade/Upgrade'));
+const contact = lazy(() => import('views/upgrade/Upgrade'));
 const dashboard = {
   gettingStarted: lazy(() => import('views/dashboard/DashboardGettingStarted')),
   analysis: lazy(() => import('views/dashboard/DashboardAnalysis')),
@@ -50,28 +53,46 @@ const routesAndMenuItems = {
       path: `${appRoot}/blog`,
       component: blog,
       label: 'menu.blog',
-      icon: 'file-text',
+      icon: 'book',
     },
     {
-      path: `${appRoot}/upgrade`,
-      label: 'menu.upgrade',
-      icon: 'trend-up',
-      component: upgrade,
+      path: `${appRoot}/programs`,
+      label: 'menu.programs',
+      icon: 'screen',
+      component: programs,
     },
     {
-      path: `${appRoot}/community`,
-      label: 'menu.community',
-      icon: 'messages',
-      component: community.index,
-      subs: [
-        {
-          path: '/list',
-          label: 'menu.community-list',
-          hideInMenu: true,
-          component: community.list,
-        },
-      ],
+      path: `${appRoot}/about-us`,
+      label: 'menu.about_us',
+      icon: 'question-hexagon',
+      component: aboutus,
     },
+    {
+      path: `${appRoot}/scholarship`,
+      label: 'menu.scholarship',
+      icon: 'diploma',
+      component: scholarship,
+    },
+    {
+      path: `${appRoot}/contact`,
+      label: 'menu.contact',
+      icon: 'phone',
+      component: contact,
+    },
+    // {
+    //   path: `${appRoot}/community`,
+    //   label: 'menu.community',
+    //   icon: 'messages',
+    //   component: community.index,
+    //   subs: [
+    //     {
+    //       path: '/list',
+    //       label: 'menu.community-list',
+    //       hideInMenu: true,
+    //       component: community.list,
+    //     },
+    //   ],
+    // },
   ],
   sidebarItems: [
     {
